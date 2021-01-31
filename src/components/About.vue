@@ -100,8 +100,8 @@
             </v-card>
           </v-timeline-item>
           </v-scroll-x-reverse-transition>
-
         </v-timeline>
+        <v-row><v-col align="center"><v-btn @click="readFile()" class="nav-button active" text>resume</v-btn></v-col></v-row>
       </v-container>
     </div>
   </div>
@@ -116,6 +116,11 @@ export default {
   mounted() {
     this.show = ! this.show;
   },
+  methods: {
+    readFile() {
+      window.open('/assets/files/jonathan-chan-resume.pdf', '_blank')
+    },
+}
 };
 </script>
 
