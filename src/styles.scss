@@ -15,6 +15,11 @@ $title-font: 'Ubuntu';
   font-size: 50px!important;
 }
 
+.page-title {
+  font-size: 40px!important;
+  font-weight: 300!important;
+}
+
 .footer-body {
   font-size: 16px!important;
   color: lightgray!important;
@@ -25,4 +30,8 @@ $title-font: 'Ubuntu';
   font-weight: 500!important;
   font-size: 20px!important;
   text-transform: none !important;
+}
+
+.current{
+  color: #88b1b1;
 }

@@ -11,7 +11,7 @@
           >
             <v-img
               :src="require('../assets/kyotoStrut.jpg')"
-              width=900
+              width=100%
             />
           </v-col>
           <v-col justify-center style="padding: 300px 0;">
@@ -27,9 +27,13 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 #landing {
     background: black;
   }
+
+.v-application .home-btn{
+  color: #88b1b1;
+}
 
 </style>

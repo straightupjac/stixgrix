@@ -2,11 +2,11 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import HomePage from '@/components/HomePage.vue';
-import About from '@/components/HomePage.vue';
-import Work from '@/components/HomePage.vue';
-import Art from '@/components/HomePage.vue';
-import Fun from '@/components/HomePage.vue';
-import NotFound from '@/components/HomePage.vue';
+import About from '@/components/About.vue';
+import Work from '@/components/Work.vue';
+import Art from '@/components/Art.vue';
+import Fun from '@/components/Fun.vue';
+import NotFound from '@/components/NotFound.vue';
 
 Vue.use(Router);
 
@@ -17,23 +17,23 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/about",
+    path: '/about',
     component: About,
   },
   {
-    path: "/work",
+    path: '/work',
     component: Work,
   },
   {
-    path: "/art",
+    path: '/art',
     component: Art,
   },
   {
-    path: "/fun",
+    path: '/fun',
     component: Fun,
   },
   {
-    path: "/*",
+    path: '/*',
     component: NotFound,
   },
 ];

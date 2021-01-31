@@ -1,22 +1,22 @@
 <template>
 <div id="app">
-  <v-app
-    width=50%
-  >
+  <v-app>
     <v-app-bar
       id="app-bar"
       elevation="0"
       app
       color=primary
+      class="ml-10 mr-10"
     >
-    <v-app-bar-title>
-       <a href="/">
-        <v-icon>
-          mdi-home
-        </v-icon>
-      </a>
-    </v-app-bar-title>
     <v-spacer/>
+    <v-btn
+        href="/"
+        target=""
+        text
+        class="text-center nav-button"
+      >
+        <span class="mr-2">home</span>
+      </v-btn>
       <v-btn
         href="/about"
         target=""
@@ -47,6 +47,7 @@
         target=""
         text
         class="text-center nav-button"
+        active-class="current"
       >
       fun
       </v-btn>
@@ -114,5 +115,9 @@ export default {
 <style lang="scss">
 @import "variables.scss";
 @import "styles.scss";
+
+#app {
+  background: black
+}
 
 </style>
