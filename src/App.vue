@@ -66,9 +66,9 @@
     </v-app-bar>
 
     <v-main>
-      <v-scroll-x-transition mode="in" hide-on-leave="true">
+      <transition name="fade" mode="out-in">
         <router-view/>
-      </v-scroll-x-transition>
+      </transition>
     </v-main>
 
     <app-footer>
@@ -89,16 +89,19 @@
             <v-btn
               v-for="icon in icons"
               :key="icon"
+              :href="icon.link"
+              target="_blank"
               class="mx-4"
               icon
             >
               <v-icon size="24px">
-                {{ icon }}
+                {{ icon.icon }}
               </v-icon>
             </v-btn>
           </v-card-text>
           <v-card-text class="mr-10 ml-10">
-            {{ new Date().getFullYear() }} — <strong>Jonathan Chan</strong>
+            <p>{{ new Date().getFullYear() }} — <strong>Jonathan Chan</strong>
+            | Designed by <a href='http://jaclynchan.me/' target="_blank" style="color:#88b1b1;text-decoration: none;"> Jaclyn Chan</a></p>
           </v-card-text>
         </v-card>
       </v-footer>
@@ -113,14 +116,14 @@ export default {
 
   data: () => ({
     userBar: false,
-    icons: ["mdi-linkedin", "mdi-instagram", "mdi-twitter", "mdi-email"],
+    icons: [
+      {icon: "mdi-linkedin", link: "https://www.linkedin.com/in/jdcjonathan/",},
+      {icon: "mdi-instagram", link: "https://www.instagram.com/stixgrix", },
+      {icon: "mdi-twitter", link: "https://twitter.com/stixgrix"},
+      {icon: "mdi-email", link: "mailto:jdchan@edu.uwaterloo.ca"},
+      ],
     goDark: true,
   }),
-  mounted() {
-    window.onscroll = () => {
-      this.changeColor();
-    };
-  },
   methods: {
     setTheme() {
       if (this.goDark === true) {

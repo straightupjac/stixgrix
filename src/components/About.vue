@@ -1,6 +1,6 @@
 <template>
   <div class=primary>
-    <div id="art"  fluid style="height: 70vh;">
+    <div id="art"  fluid style="height: 100vh;">
       <v-container>
       <v-row>
         <v-col>
@@ -27,8 +27,9 @@
           dense
           >
           <!-- education -->
+         <v-scroll-x-reverse-transition name="fade"  mode="out-in" appear>
           <v-timeline-item>
-            <v-card class="elevation-0">
+            <v-card class="elevation-2">
               <v-card-title>
                 Education
               </v-card-title>
@@ -44,10 +45,12 @@
               </v-card-text>
             </v-card>
           </v-timeline-item>
+         </v-scroll-x-reverse-transition>
 
              <!-- experience -->
+          <v-scroll-x-reverse-transition name="fade"  mode="out-in" appear>
           <v-timeline-item>
-            <v-card class="elevation-0">
+            <v-card class="elevation-2">
               <v-card-title>
                 Selected Experiences
               </v-card-title>
@@ -71,10 +74,12 @@
               </v-card-text>
             </v-card>
           </v-timeline-item>
+          </v-scroll-x-reverse-transition>
 
              <!-- other -->
+          <v-scroll-x-reverse-transition name="fade"  mode="out-in" appear>
           <v-timeline-item>
-            <v-card class="elevation-0">
+            <v-card class="elevation-2">
               <v-card-title>
                 Background &amp; Interests
               </v-card-title>
@@ -94,6 +99,7 @@
               </v-card-text>
             </v-card>
           </v-timeline-item>
+          </v-scroll-x-reverse-transition>
 
         </v-timeline>
       </v-container>

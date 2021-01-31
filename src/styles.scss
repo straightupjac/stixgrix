@@ -49,3 +49,23 @@ $title-font: 'Ubuntu';
   background-color: transparent!important;
   color: $Accent!important;
 }
+
+.v-scroll-x-transition-enter-active, .v-scroll-x-transition-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 3s;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+}
+
+.fade-enter-active {
+  transition-delay: .5s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}

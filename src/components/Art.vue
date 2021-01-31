@@ -49,14 +49,33 @@
       </v-container>
     </div>
     <div id="panel" fluid style="height: 80vh;">
+      <v-overlay
+      :opacity="1"
+      :value="overlay"
+    >
+      <v-progress-circular
+        indeterminate
+        color="grey lighten-5"
+      ></v-progress-circular>
+    </v-overlay>
     </div>
     <div id="art" fluid style="height: 150vh;">
     </div>
   </div>
 </template>
 
-<style scoped>
+<script>
+  export default {
+    data: () => ({
+      overlay: true,
+    }),
+    mounted() {
+      this.overlay = false
+    },
+  }
+</script>
 
+<style scoped>
 #art {
     background: url('../assets/kyotoStrutColor.svg') no-repeat;
     -webkit-background-size: cover;
