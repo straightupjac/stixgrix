@@ -35,3 +35,8 @@ $title-font: 'Ubuntu';
 .current{
   color: #88b1b1;
 }
+
+.active, .v-btn:hover {
+  background-color: transparent!important;
+  color: $Accent!important;
+}
