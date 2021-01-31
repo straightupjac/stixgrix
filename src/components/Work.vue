@@ -9,7 +9,7 @@
           md="6"
           lg="7">
           <v-img
-            :src="require('../assets/tg-city.jpg')"
+            :src="require('../assets/windyjon.jpg')"
             width=100%
           />
         </v-col>
