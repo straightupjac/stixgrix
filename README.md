@@ -1,5 +1,7 @@
 # stixgrix
 
+Jonathan Chan's Portfolio
+
 ## Project setup
 ```
 yarn install
