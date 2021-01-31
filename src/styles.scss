@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+$body-font-family: 'Ubuntu';
+$heading-font-family: 'Ubuntu';
+$title-font: 'Ubuntu';
+
+.v-application {
+  font-family: $body-font-family, sans-serif !important;
+   .title { // To pin point specific classes of some components
+      font-family: $title-font, sans-serif !important;
+   }
+}
+
+.landing-title {
+  font-size: 50px!important;
+}
+
+.footer-body {
+  font-size: 16px!important;
+  color: lightgray!important;
+}
+
+.nav-button {
+  font-style: normal;
+  font-weight: 500!important;
+  font-size: 20px!important;
+  text-transform: none !important;
+}
