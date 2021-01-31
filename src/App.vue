@@ -1,14 +1,24 @@
 <template>
 <div id="app">
-  <v-app>
+  <v-app
+    color=primary
+  >
     <v-app-bar
       id="app-bar"
       elevation="0"
       app
       color=primary
-      class="ml-10 mr-10"
+      fade-img-on-scroll
     >
+    <v-switch
+      color=secondary
+      class="ml-15 mt-5"
+      inset
+      @change="toggleDarkTheme()"
+    >
+    </v-switch>
     <v-spacer/>
+    <div class="ml-10 mr-10">
     <v-btn
         href="/"
         target=""
@@ -51,22 +61,24 @@
       >
       fun
       </v-btn>
+    </div>
     </v-app-bar>
 
     <v-main>
-      <router-view/>
+      <v-scroll-x-transition mode="in" hide-on-leave="true">
+        <router-view/>
+      </v-scroll-x-transition>
     </v-main>
 
     <app-footer>
       <v-footer
-        dark
         padless
       >
         <v-card
           flat
           tile
           width=100%
-          class="primary white--text"
+          class="primary"
         >
         <v-card-title class="ml-10 mr-10">
           Like what you see?
@@ -76,7 +88,7 @@
             <v-btn
               v-for="icon in icons"
               :key="icon"
-              class="mx-4 white--text"
+              class="mx-4"
               icon
             >
               <v-icon size="24px">
@@ -84,7 +96,7 @@
               </v-icon>
             </v-btn>
           </v-card-text>
-          <v-card-text class="white--text mr-10 ml-10">
+          <v-card-text class="mr-10 ml-10">
             {{ new Date().getFullYear() }} — <strong>Jonathan Chan</strong>
           </v-card-text>
         </v-card>
@@ -108,6 +120,9 @@ export default {
     };
   },
   methods: {
+    toggleDarkTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
   },
 };
 </script>
@@ -115,9 +130,5 @@ export default {
 <style lang="scss">
 @import "variables.scss";
 @import "styles.scss";
-
-#app {
-  background: black
-}
 
 </style>
