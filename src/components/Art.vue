@@ -1,6 +1,6 @@
 <template>
   <div class=primary>
-    <div fluid style="height: 120vh;">
+    <div fluid style="height: 130vh;">
       <v-container>
         <v-row>
           <v-col
@@ -11,20 +11,38 @@
             <v-img
             :src="require('../assets/tg-city.jpg')"
             width=100%
-            />
+            >
+            <template v-slot:placeholder>
+              <v-row
+                class="fill-height ma-0"
+                align="center"
+                justify="center"
+              >
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row>
+        </template>
+            </v-img>
           </v-col>
           <v-col
             cols="3"
-            md="2.5"
-            lg="2.5"
+            md="3"
+            lg="3"
             >
             <v-card elevation=0 color=transparent>
-              <v-card-title class="page-title">Art</v-card-title>
-              <v-card-actions><v-btn href="https://www.behance.net/jdcjonathan" target="_blank">Portfolio</v-btn></v-card-actions>
+              <v-card-title class="page-title">Art<v-spacer/> <v-btn rounded href="https://www.behance.net/jdcjonathan" target="_blank">Portfolio</v-btn></v-card-title>
             </v-card>
             <v-img
-            :src="require('../assets/kyotoStrutGreyscale.svg')"
-            width=100%
+              v-if="!this.$vuetify.theme.dark"
+              :src="require('../assets/kyotoStrutGreyscaleInvert.svg')"
+              width=100%
+            />
+            <v-img
+              v-else
+              :src="require('../assets/kyotoStrutGreyscale.svg')"
+              width=100%
             />
           </v-col>
         </v-row>

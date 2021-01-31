@@ -9,13 +9,13 @@
             lg="5"
           >
             <v-img
-              v-if="this.$vuetify.theme.dark"
-              :src="require('../assets/kyotoStrutGreyscale.svg')"
+              v-if="!this.$vuetify.theme.dark"
+              :src="require('../assets/kyotoStrutGreyscaleInvert.svg')"
               width=100%
             />
             <v-img
               v-else
-              :src="require('../assets/kyotoStrutGreyscaleInvert.svg')"
+              :src="require('../assets/kyotoStrutGreyscale.svg')"
               width=100%
             />
           </v-col>

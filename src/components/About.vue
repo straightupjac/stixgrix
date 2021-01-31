@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class=primary>
     <div id="art"  fluid style="height: 70vh;">
       <v-container>
       <v-row>

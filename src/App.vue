@@ -2,6 +2,7 @@
 <div id="app">
   <v-app
     color=primary
+    :dark="setTheme()"
   >
     <v-app-bar
       id="app-bar"
@@ -14,7 +15,7 @@
       color=secondary
       class="ml-15 mt-5"
       inset
-      @change="toggleDarkTheme()"
+      v-model="goDark"
     >
     </v-switch>
     <v-spacer/>
@@ -113,6 +114,7 @@ export default {
   data: () => ({
     userBar: false,
     icons: ["mdi-linkedin", "mdi-instagram", "mdi-twitter", "mdi-email"],
+    goDark: true,
   }),
   mounted() {
     window.onscroll = () => {
@@ -120,8 +122,12 @@ export default {
     };
   },
   methods: {
-    toggleDarkTheme() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    setTheme() {
+      if (this.goDark === true) {
+        return (this.$vuetify.theme.dark = true);
+      } else {
+        return (this.$vuetify.theme.dark = false);
+      }
     },
   },
 };

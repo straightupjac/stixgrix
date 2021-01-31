@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class=primary>
     <v-container>
       <v-row>
         <v-col
@@ -9,7 +9,20 @@
           lg="8">
           <v-img
             :src="require('../assets/22.jpg')"
-          />
+          >
+            <template v-slot:placeholder>
+            <v-row
+              class="fill-height ma-0"
+              align="center"
+              justify="center"
+            >
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row>
+          </template>
+          </v-img>
         </v-col>
         <v-col justify-center style="padding: 70px 0;">
           <v-card color=transparent>
@@ -32,7 +45,20 @@
           <v-img
             :src="require('../assets/jon.jpeg')"
             width=100%
-          />
+          >
+          <template v-slot:placeholder>
+            <v-row
+              class="fill-height ma-0"
+              align="center"
+              justify="center"
+            >
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row>
+          </template>
+        </v-img>
         </v-col>
       </v-row>
     </v-container>
