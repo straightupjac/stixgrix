@@ -51,7 +51,7 @@ $title-font: 'Ubuntu';
 }
 
 .v-scroll-x-transition-enter-active, .v-scroll-x-transition-leave-active {
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .fade-enter-active,
@@ -68,4 +68,12 @@ $title-font: 'Ubuntu';
 .fade-enter,
 .fade-leave-active {
   opacity: 0
+}
+
+// background colors
+.theme--dark.v-application {
+  background-color: var(--v-background-base, black) !important;
+}
+.theme--light.v-application {
+  background-color: var(--v-background-base, white) !important;
 }

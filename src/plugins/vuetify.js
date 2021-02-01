@@ -15,6 +15,7 @@ export default new Vuetify({
         info: '#2196F3',
         success: '#4CAF50',
         warning: '#FFC107',
+        invert: 'black',
       },
       dark: {
         primary: 'black',
@@ -24,7 +25,7 @@ export default new Vuetify({
         info: '#2196F3',
         success: '#4CAF50',
         warning: '#FFC107',
-
+        invert: 'white',
       },
     },
   },
