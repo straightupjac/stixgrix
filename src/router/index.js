@@ -41,7 +41,7 @@ const routes = [
 const router = new Router({
   mode: "hash",
   routes,
-  base: '.',
+  base: process.env.BASE_URL,
 });
 
 export default router;
