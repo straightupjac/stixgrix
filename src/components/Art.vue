@@ -10,6 +10,7 @@
             >
             <v-img
             :src="require('../assets/tg-city.jpg')"
+            height=95vh
             >
             <template v-slot:placeholder>
               <v-row
@@ -33,15 +34,21 @@
             <v-card elevation=0 color=transparent>
               <v-card-title class="page-title">Art<v-spacer/> <v-btn rounded href="https://www.behance.net/jdcjonathan" target="_blank">Portfolio</v-btn></v-card-title>
             </v-card>
-            <v-img
-              v-if="!this.$vuetify.theme.dark"
-              :src="require('../assets/kyotoStrutGreyscaleInvert.svg')"
-            />
-            <v-img
-              v-else
-              :src="require('../assets/kyotoStrutGreyscale.svg')"
-              height=100%
-            />
+            <v-container fluid>
+              <v-img
+                v-if="!this.$vuetify.theme.dark"
+                contain
+                :src="require('../assets/kyotoStrutGreyscaleInvert.svg')"
+                height=85vh
+              />
+              <v-img
+                v-else
+                contain
+                :src="require('../assets/kyotoStrutGreyscale.svg')"
+                height=85vh
+
+              />
+            </v-container>
           </v-col>
         </v-row>
       </v-container>
