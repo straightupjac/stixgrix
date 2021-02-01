@@ -39,7 +39,7 @@ const routes = [
 ];
 
 const router = new Router({
-  mode: "hash",
+  mode: "history",
   routes,
   base: process.env.BASE_URL,
 });
