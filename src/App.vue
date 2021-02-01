@@ -21,7 +21,7 @@
     <v-spacer/>
     <div class="ml-10 mr-10">
     <v-btn
-        href="/"
+        to="/"
         target=""
         text
         class="text-center nav-button"
@@ -29,7 +29,7 @@
         <span class="mr-2">home</span>
       </v-btn>
       <v-btn
-        href="/about"
+        to="/about"
         target=""
         text
         class="text-center nav-button"
@@ -38,7 +38,7 @@
       </v-btn>
 
       <v-btn
-        href="/work"
+        to="/work"
         target=""
         text
         class="text-center nav-button"
@@ -46,7 +46,7 @@
       work
       </v-btn>
       <v-btn
-        href="/art"
+        to="/art"
         target=""
         text
         class="text-center nav-button"
@@ -54,7 +54,7 @@
       art
       </v-btn>
       <v-btn
-        href="/fun"
+        to="/fun"
         target=""
         text
         class="text-center nav-button"

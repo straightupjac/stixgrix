@@ -1,7 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/stixgrix/'
-    : '/',
+  publicPath: '/stixgrix/',
     outputDir: 'docs',
     filenameHashing: false,
     productionSourceMap: false,
