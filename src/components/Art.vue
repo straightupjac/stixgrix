@@ -1,6 +1,6 @@
 <template>
   <div class=primary>
-    <div fluid style="height: 130vh;">
+    <div fluid style="height: 100vh;">
       <v-container>
         <v-row>
           <v-col
@@ -10,7 +10,6 @@
             >
             <v-img
             :src="require('../assets/tg-city.jpg')"
-            width=100%
             >
             <template v-slot:placeholder>
               <v-row
@@ -37,12 +36,11 @@
             <v-img
               v-if="!this.$vuetify.theme.dark"
               :src="require('../assets/kyotoStrutGreyscaleInvert.svg')"
-              width=100%
             />
             <v-img
               v-else
               :src="require('../assets/kyotoStrutGreyscale.svg')"
-              width=100%
+              height=100%
             />
           </v-col>
         </v-row>
