@@ -53,7 +53,7 @@
         </v-row>
       </v-container>
     </div>
-    <div id="panel" fluid style="height: 80vh;">
+    <div id="panel" fluid style="height: 90vh;">
       <v-overlay
       :opacity="1"
       :value="overlay"
